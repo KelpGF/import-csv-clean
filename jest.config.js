@@ -2,6 +2,12 @@
 module.exports = {
   preset: 'ts-jest',
   roots: ['<rootDir>/src'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/{!(*protocols|index),}.ts',
+    '!<rootDir>/src/main/**',
+    '**/*.spec.ts',
+    '**/*.test.ts',
+  ],
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
