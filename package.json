@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:cov": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
