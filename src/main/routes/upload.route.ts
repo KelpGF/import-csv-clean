@@ -23,8 +23,13 @@ export default (
     }
 
     const filename = req.file.filename;
+    console.time("Processing file");
     await processFileService.processFile(filename);
+    console.timeEnd("Processing file");
+    console.log(`File size: ${req.file.size} bytes`);
 
-    res.json({ message: "File uploaded successfully!" });
+    res.json({
+      message: "File uploaded successfully! We are processing the data",
+    });
   });
 };
