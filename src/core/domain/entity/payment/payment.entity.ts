@@ -23,7 +23,7 @@ export class PaymentEntity extends BaseEntityAbstract {
   private _debtDueDate: Date;
   private _debtID: string;
 
-  constructor(params: Params) {
+  private constructor(params: Params) {
     super({
       id: params.id,
       createdAt: params.createdAt,
