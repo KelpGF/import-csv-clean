@@ -4,11 +4,8 @@ import { processFileServiceFactory } from "../factory/application/process-file.s
 
 export function setUpApp() {
   const app = express();
-  const port = 3000;
 
   uploadRoute(app, processFileServiceFactory());
 
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
+  return app;
 }
