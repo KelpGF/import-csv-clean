@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    entrypoint: sh -c "tail -f /dev/null"
+    container_name: import_csv
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app

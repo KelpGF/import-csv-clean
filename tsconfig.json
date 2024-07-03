@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "removeComments": true, 
+    "noUnusedParameters": false,
+    "module": "commonjs",
+    "target": "es2019",
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/domain/*": ["src/core/domain/*"],
+      "@/application/*": ["src/core/application/*"],
+      "@/persistence/*": ["src/infrastructure/persistence/*"],
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": []
+}
