@@ -39,7 +39,13 @@ export class ProcessFileImpl implements ProcessFileService {
       debtDueDate: new Date(row[4]),
       debtID: row[5],
     };
-    this.registerPayment.register({ payment });
+    this.registerPayment.register({ payment }).then((result) => {
+      if (result.isLeft()) {
+        console.error(
+          `Payment ERROR [ID ${payment.debtID}]: ${result.value.join(", ")}`,
+        );
+      }
+    });
   }
 
   private removeFile(filename: string): void {
