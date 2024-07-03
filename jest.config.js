@@ -14,6 +14,6 @@ module.exports = {
   moduleNameMapper: {
     "@/domain/(.*)": "<rootDir>/src/core/domain/$1",
     "@/application/(.*)": "<rootDir>/src/core/application/$1",
-    "@/persistence/(.*)": "<rootDir>/src/infrastructure/persistence/$1",
+    "@/infrastructure/(.*)": "<rootDir>/src/infrastructure/$1",
   }
 };
