@@ -40,6 +40,14 @@ export class PaymentEntity extends BaseEntityAbstract {
     this.validate();
   }
 
+  get email() {
+    return this._email;
+  }
+
+  get debtID() {
+    return this._debtID;
+  }
+
   validate() {
     if (!this._name) {
       this.addNotification(DomainError.create("Name is required"));
