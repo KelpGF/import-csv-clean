@@ -7,10 +7,10 @@
     "module": "commonjs",
     "target": "es2019",
     "esModuleInterop": true,
+    "outDir": "dist",
     "rootDir": "src",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -21,7 +21,7 @@
     "paths": {
       "@/domain/*": ["src/core/domain/*"],
       "@/application/*": ["src/core/application/*"],
-      "@/persistence/*": ["src/infrastructure/persistence/*"],
+      "@/infrastructure/*": ["src/infrastructure/*"],
     }
   },
   "include": [
