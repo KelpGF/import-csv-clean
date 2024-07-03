@@ -17,6 +17,11 @@ export default (
   processFileService: ProcessFileService,
 ): void => {
   router.post("/upload", upload.single("file"), async (req, res) => {
+    if (!req.file) {
+      res.status(400).json({ message: "No file uploaded" });
+      return;
+    }
+
     const filename = req.file.filename;
     await processFileService.processFile(filename);
 
