@@ -5,6 +5,10 @@ import { processFileServiceFactory } from "../factory/application/process-file.s
 export function setUpApp() {
   const app = express();
 
+  app.get("/", (req, res) => {
+    res.send("Hello World!");
+  });
+
   uploadRoute(app, processFileServiceFactory());
 
   return app;
