@@ -4,6 +4,9 @@ services:
     entrypoint: sh -c "tail -f /dev/null"
     container_name: import_csv
     working_dir: /app
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
     ports:
       - "3000:3000"
     volumes:
